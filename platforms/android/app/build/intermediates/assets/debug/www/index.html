@@ -1,0 +1,999 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>کاریو</title>
+
+
+
+<link href="css/style.css" type="text/css" rel="stylesheet">
+
+<link href="css/fontiran.css" type="text/css" rel="stylesheet">
+
+<!--Import Google Icon Font-->
+
+<link href="css/materialFont.css" rel="stylesheet">
+
+<!--Import materialize.css-->
+
+<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+
+
+<!--Let browser know website is optimized for mobile-->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="mobile-web-app-capable" content="yes">
+
+
+
+
+<link rel="icon" type="image/png" sizes="144x144" href="favicon/favicon-96x96.png">
+
+
+
+
+
+
+
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<script>
+
+	function getOS() {
+	  var userAgent = window.navigator.userAgent,
+		  platform = window.navigator.platform,
+		  macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
+		  windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
+		  iosPlatforms = ['iPhone', 'iPad', 'iPod'],
+		  os = null;
+
+	  if (macosPlatforms.indexOf(platform) !== -1) {
+		os = 'Mac OS';
+	  } else if (iosPlatforms.indexOf(platform) !== -1) {
+		os = 'iOS';
+	  } else if (windowsPlatforms.indexOf(platform) !== -1) {
+		os = 'Windows';
+	  } else if (/Android/.test(userAgent)) {
+		os = 'Android';
+	  } else if (!os && /Linux/.test(platform)) {
+		os = 'Linux';
+	  }
+
+	  return os;
+	}
+
+	if (getOS() === 'Windows'){
+		//alert("Androide dadash");
+		//showAndroidOffer();
+		//alert("Androide dadash");
+	} else {
+		//alert("okeye");
+	}
+
+	function showAndroidOffer(){
+
+		document.getElementById("androidOffer").style.opacity = '1';
+		document.getElementById("androidOffer").style.display = 'block';
+	}
+
+</script>
+
+
+	<script src="cordova.js"></script>
+
+</head>
+
+
+
+<body style="background-color: #203D52;">
+
+
+
+
+<div style="position: absolute; z-index: 999;">
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--header-->
+
+<div class="header colorAccent z-depth-3 off">
+
+	<div class="progressBar abs off">
+
+		<div class="pBar abs centerAbsHorizontal"></div>
+
+	</div>
+
+	<!--loginBtn-->
+
+	<div class="headerBtnLtr waves-effect waves-green" onClick="makeBrandList(48)">
+
+		<div class="headerBtnIcon centerAbsVertical userLogin"></div>
+
+		<div class="headerBtnText centerAbsVertical white-text">ورود / ثبت‌نام</div>
+
+	</div>
+
+	<div class="headerBtnRtl">
+
+		<div class="centerAbsVertical carioSolidIcon headerIconPositions bigBtnIcons"></div>
+
+	</div>
+
+	<div class="headerBtnRtl waves-effect waves-green">
+
+		<div class="headerBtnIcon centerAbsVertical userLogin headerIconPositions"></div>
+
+		<div class="headerBtnText centerAbsVertical white-text">کاریو چیست؟</div>
+
+	</div>
+
+	<div class="headerBtnRtl waves-effect waves-green">
+
+		<div class="headerBtnIcon centerAbsVertical userLogin headerIconPositions"></div>
+
+		<div class="headerBtnText centerAbsVertical white-text">سرویس‌های در محل</div>
+
+	</div>
+
+	<div class="headerBtnRtl waves-effect waves-green">
+
+		<div class="headerBtnIcon centerAbsVertical userLogin headerIconPositions"></div>
+
+		<div class="headerBtnText centerAbsVertical white-text">ثبت‌نام متخصصین</div>
+
+	</div>
+
+</div>
+
+
+
+<!--chooseService-->
+
+	<div class="customBody fixed fullPageAbs"></div>
+
+<div class="orderSection fix orderSectionSemiDark centerAbsHorizontal myCustomBoxShadow">
+
+       <!--intro-->
+        <div id="intro" class="introHolder abs fullPageAbs zIndex1000 ">
+
+		<div id="sliderHolder" class="sliderHolder abs easeMedium">
+			<div class="relative introSection">
+				<div class="introImage abs introServices centerAbsHorizontal"></div>
+				<div class="introTitle abs centerAbsHorizontal">خدمات خودرو در محل</div>
+				<div class="introText abs centerAbsHorizontal">انجام سرویس های دوره ای خودرو در محل</div>
+			</div>
+			<div class="relative introSection">
+				<div class="introImage abs introMakanYab centerAbsHorizontal"></div>
+				<div class="introTitle abs centerAbsHorizontal">سرویس های جانبی</div>
+				<div class="introText abs centerAbsHorizontal">سرویس هایی نظیر خلافی، محاسبه قیمت خودرو، نرخ روز خودرو، و... کاملا رایگان!</div>
+			</div>
+			<div class="relative introSection">
+				<div class="introImage abs introSalamat centerAbsHorizontal"></div>
+				<div class="introTitle abs centerAbsHorizontal">همه چیز درباره خودرو</div>
+				<div class="introText abs centerAbsHorizontal">اخبار روز و مطالب آموزشی در جهت حفظ و نگهداری بهتر خودرو</div>
+			</div>
+		</div>
+
+		<div class="abs introControlBox">
+			<div id="backIntro" class="backIntro relative waves-effect waves-green introControlBtns" onClick="introBack()">
+				<div class="headerBtnRtl waves-effect waves-dark width120">
+					<div class="headerBtnIcon centerAbsVertical userLogin headerIconPositions"></div>
+					<div class="headerBtnText centerAbsVertical deadText">قبلی</div>
+				</div>
+			</div>
+			<div id="nextIntro" class="nextIntro relative waves-effect waves-green introControlBtns" onClick="introNext()">
+				گرفتم، بعدی
+			</div>
+			<div id="skipIntro" class="skipIntro relative waves-effect waves-green introControlBtns" onClick="introOnSkip()">
+				<div class="headerBtnLtr waves-effect waves-dark width120">
+					<div class="headerBtnIcon centerAbsVertical userLogin"></div>
+					<div class="headerBtnText centerAbsVertical deadText">بیخیال</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!--splash-->
+		<div id="splash" class="fixed fullPageAbs zIndex1000 splash">
+			<div class="splashLogo abs centerAbs">
+
+				<div class="splashTip abs centerAbsHorizontal">کاریو؛ پلتفرم جامع خدمات خودرو</div>
+			</div>
+		</div>
+
+	<!--androidOffer-->
+		<div id="androidOffer" class="fix fullPageAbs orange androidOfferStyle">
+			<div class="abs centerAbs androidOfferContent" style="width: 100%; padding: 8px 0px;">
+
+				<div class="relative fullWidthRel white-text" style="width: 100%; padding: 8px 0px; margin-bottom: 16px; font-size: 16px; font-weight: bold; text-align: center;">دانلود اپلیکیشن اندروید کاریو از:</div>
+				<div class="relative fullWidthRel centerTexts">
+					<div class="relative waves-effect waves-orange myCustomBoxShadow green storeBtn" style="margin: 4px; width: 64px; height: 64px; border-radius: 50%; background-image: url(img/bazar.png); background-size: 80%;
+					 background-position: center center; background-repeat: no-repeat;" onclick="window.location.href='https://cafebazaar.ir/app/ir.cario.app/?l=fa'"></div>
+					<div class="relative waves-effect waves-orange myCustomBoxShadow blue-grey storeBtn" style="margin: 4px; width: 64px; height: 64px; border-radius: 50%; background-image: url(img/play.png); background-size: 60%; background-position: center center; background-repeat: no-repeat;"  onclick="window.location.href='https://play.google.com/store/apps/details?id=ir.cario.app'"></div>
+				</div>
+				<script>
+					function offDialoge(){
+						document.getElementById("androidOffer").style.opacity = '0';    document.getElementById("androidOffer").style.display = 'none';
+					}
+				</script>
+				<div class="white-text relative waves-effect waves-light red fullWidthRel" style="padding: 8px 16px; margin: 16px auto; font-size: 16px; text-align: center;" onclick="offDialoge()">بیخیال</div>
+
+			</div>
+
+
+
+		</div>
+	<!--stepper-->
+
+        <div class="stepsRow abs" style="background-color: #407e83;">
+
+		<div id="step1" class="steps relative easeMedium waves-effect waves-green borderLeft activeStep" onClick="activeStepManager(1)">
+
+                    <div id="stepIcon1" class="stepIcon abs centerAbsVertical easeMedium stepperService"></div>
+
+			<div id="stepLabel1" class="stepLabel abs centerAbsVertical activeText">انتخاب سرویس</div>
+
+		</div>
+
+
+
+		<div id="step2" class="steps relative easeMedium waves-effect waves-green" onClick="activeStepManager(2)">
+
+			<div id="stepIcon2" class="stepIcon abs centerAbsVertical opacityHalf easeMedium setepperOrder"></div>
+
+			<div id="stepLabel2" class="stepLabel abs centerAbsVertical">ثبت مشخصات و پرداخت</div>
+
+		</div>
+
+	</div>
+
+	<!--chooseServiceType-->
+
+	<div id="stepChooseType" class="orderParts abs padding15sides easeMedium">
+
+		<!--ghesmate balaye har section shomare, title, desc-->
+
+                <div class="relative centerTexts stepTitlesHolder width70">
+
+			<div class="stepDigit relative inlineBlock centerTexts">1</div><br>
+
+			<div class="giomeEnd relative inlineBlock giome"></div><div class="inlineBlock relative sectionTitle">انتخاب نوع سرویس</div><div class="giomeStart relative inlineBlock giome"></div><br>
+
+			<div class="stepDescs relative fullWidthRel centerTexts">نوع سرویس مورد نظر را از لیست زیر انتخاب کنید، جهت مشاهده توضیحات هر سرویس روی آن کلیک کنید.</div>
+
+		</div>
+
+
+
+
+
+
+
+		<div id="service1" class="waves-effect waves-yellow relative serviceHolder myCustomBoxShadow" onClick="whatServiceIsChoosed(1)">
+
+			<div class="serviceIcon abs easeMedium carWashIcon"></div>
+
+			<div class="serviceNameDesc abs centerAbsVertical easeLong">
+
+				<div class="fullWidthRel relative serviceName">کارواش</div>
+
+                                <div class="fullWidthRel relative serviceDesc" style="font-size: 12px; line-height: 16px;">کارواش در محل</div>
+
+				<div class="props relative fullWidthRel">
+
+					<div   class="prop  prop1 relative easeShort">
+
+						<div class="propLabel abs centerAbsHorizontal easeShort">مناسب شرایط اضطراری</div>
+
+					</div>
+
+					<div   class="prop  prop2  relative easeShort">
+
+						<div class="propLabel abs centerAbsHorizontal easeShort">صرفه‌جویی در زمان</div>
+
+					</div>
+
+					<div   class="prop  prop3  relative easeShort">
+
+						<div class="propLabel abs centerAbsHorizontal easeShort">گارانتی اصالت</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="service2" class=" waves-effect waves-yellow relative serviceHolder myCustomBoxShadow" onClick="whatServiceIsChoosed(2)">
+
+			<div class="serviceIcon abs easeMedium oilIcon"></div>
+
+			<div class="serviceNameDesc abs centerAbsVertical easeLong">
+
+				<div class="fullWidthRel relative serviceName">تعویض روغن</div>
+
+				<div class="fullWidthRel relative serviceDesc" style="font-size: 12px; line-height: 16px;">سرویس تعویض روغن در محل</div>
+
+				<div class="props relative fullWidthRel">
+
+					<div   class="prop  prop1 relative easeShort">
+
+						<div class="propLabel abs centerAbsHorizontal easeShort">مناسب شرایط اضطراری</div>
+
+					</div>
+
+					<div   class="prop  prop2  relative easeShort">
+
+						<div class="propLabel abs centerAbsHorizontal easeShort">صرفه‌جویی در زمان</div>
+
+					</div>
+
+					<div   class="prop  prop3  relative easeShort">
+
+						<div class="propLabel abs centerAbsHorizontal easeShort">گارانتی اصالت</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="service3" class=" waves-effect waves-yellow relative serviceHolder myCustomBoxShadow" onClick="whatServiceIsChoosed(3)">
+
+			<div class="serviceIcon abs easeMedium batteryIcon"></div>
+
+			<div class="serviceNameDesc abs centerAbsVertical easeLong">
+
+				<div class="fullWidthRel relative serviceName">تعویض باتری</div>
+
+				<div class="fullWidthRel relative serviceDesc" style="font-size: 12px; line-height: 16px;">تعویض باتری در محل</div>
+
+				<div class="props relative fullWidthRel">
+
+					<div   class="prop  prop1 relative easeShort">
+
+						<div class="propLabel abs centerAbsHorizontal easeShort">مناسب شرایط اضطراری</div>
+
+					</div>
+
+					<div   class="prop  prop2  relative easeShort">
+
+						<div class="propLabel abs centerAbsHorizontal easeShort">صرفه‌جویی در زمان</div>
+
+					</div>
+
+					<div   class="prop  prop3  relative easeShort">
+
+						<div class="propLabel abs centerAbsHorizontal easeShort">گارانتی اصالت</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="service4" class=" waves-effect waves-yellow relative serviceHolder myCustomBoxShadow" onClick="whatServiceIsChoosed(4)">
+
+			<div class="serviceIcon abs easeMedium karshenasiIcon"></div>
+
+			<div class="serviceNameDesc abs centerAbsVertical easeLong">
+
+				<div class="fullWidthRel relative serviceName">کارشناسی خودرو</div>
+
+				<div class="fullWidthRel relative serviceDesc" style="font-size: 12px; line-height: 16px;">کارشناسی خودرو و قیمت گذاری در محل</div>
+
+				<div class="props relative fullWidthRel">
+
+					<div   class="prop  prop1 relative easeShort">
+
+						<div class="propLabel abs centerAbsHorizontal easeShort">مناسب شرایط اضطراری</div>
+
+					</div>
+
+					<div   class="prop  prop2  relative easeShort">
+
+						<div class="propLabel abs centerAbsHorizontal easeShort">صرفه‌جویی در زمان</div>
+
+					</div>
+
+					<div   class="prop  prop3  relative easeShort">
+
+						<div class="propLabel abs centerAbsHorizontal easeShort">گارانتی اصالت</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="service5" class=" waves-effect waves-yellow relative serviceHolder myCustomBoxShadow" onClick="whatServiceIsChoosed(5)">
+
+			<div class="serviceIcon abs easeMedium feulIcon"></div>
+
+			<div class="serviceNameDesc abs centerAbsVertical easeLong">
+
+				<div class="fullWidthRel relative serviceName">سوخت در محل</div>
+
+				<div class="fullWidthRel relative serviceDesc" style="font-size: 12px; line-height: 16px;">تحویل سوخت آنلاین</div>
+
+				<div class="props relative fullWidthRel">
+
+					<div   class="prop  prop1 relative easeShort">
+
+						<div class="propLabel abs centerAbsHorizontal easeShort">مناسب شرایط اضطراری</div>
+
+					</div>
+
+					<div   class="prop  prop2  relative easeShort">
+
+						<div class="propLabel abs centerAbsHorizontal easeShort">صرفه‌جویی در زمان</div>
+
+					</div>
+
+					<div   class="prop  prop3  relative easeShort">
+
+						<div class="propLabel abs centerAbsHorizontal easeShort">گارانتی اصالت</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="relative serviceHolder myCustomBoxShadow centerTexts paddingAds fw easeMedium">
+
+			<div class="mobileServicesIcon inlineBlock relative khalafiIcon"></div>
+
+			<div class="mobileServicesIcon inlineBlock relative emtiazManfiIcon"></div>
+
+			<div class="mobileServicesIcon inlineBlock relative emdadKhodroIcon"></div>
+
+			<div class="mobileServicesIcon inlineBlock relative nerkhIcon"></div>
+
+			<div class="mobileServicesIcon inlineBlock relative baravordIcon"></div>
+
+			<div class="relative fullWidthRel downloadAppDesc">خلافی، نمره منفی، امدادخودرو، نرخ روز و برآورد خودرو، در</div>
+
+			<div id="getFromBazar" class="headerBtnRtl green waves-effect waves-yellow loginBtn inlineBlock marginBottom8 inline-Btn floatOff">
+
+				<div class="headerBtnIcon centerAbsVertical headerIconPositions bazar"></div>
+
+                                <div onclick="window.location.href = 'https://cafebazaar.ir/app/ir.cario.app/?l=fa'" class="headerBtnText centerAbsVertical white-text optionalWidth">کاریو در کافه بازار
+
+					<div class="engLabel abs">CARIO ON BAZAAR</div>
+
+				</div>
+
+			</div>
+
+			<div id="getFromPlayStore" class="headerBtnRtl waves-effect waves-purple loginBtn inlineBlock marginBottom8 inline-Btn floatOff blueBack">
+
+				<div class="headerBtnIcon centerAbsVertical headerIconPositions play"></div>
+
+				<div onclick="window.location.href = 'https://play.google.com/store/apps/details?id=ir.cario.app'" class="headerBtnText centerAbsVertical white-text optionalWidth">کاریو در PlayStore
+
+					<div class="engLabel abs">CARIO ON PLAYSTORE</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+		<div class="relative addressTable fullWidthRel addressListRadius footer">
+
+			<div class="addressTableRow relative fullWidthRel easeLong footerHolder">
+
+
+
+				<div class="footerFont abs centerAbs centerTexts">
+
+					<div class="relative footerCarioLogo containImage"></div>
+
+					<div class="inlineBlock relative footerText">قدرت گرفته از کاریو<br>
+
+						<div class="inlineBlock relative deadText">تابستان 1397</div></div>
+
+				</div>
+
+
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<!--chooseProductAndPay-->
+
+	<div id="stepChooseProduct" class="orderParts abs backLight padding15sides easeMedium off">
+
+		<!--ghesmate balaye har section shomare, title, desc-->
+
+		<div class="relative centerTexts stepTitlesHolder width70">
+
+			<div class="stepDigit relative inlineBlock centerTexts">2</div><br>
+
+			<div class="giomeEnd relative inlineBlock giome"></div><div class="inlineBlock relative sectionTitle">تکمیل و ثبت سفارش</div><div class="giomeStart relative inlineBlock giome"></div><br>
+
+			<div class="stepDescs relative fullWidthRel centerTexts">فرم زیر را پر کرده سفارش خود را به راحتی ثبت کنید!</div>
+
+		</div><br><br>
+
+
+		<div class="orderStepHolder relative fullWidthRel easeShort choosedPreview">
+
+
+			<div class="orderBadge abs z-depth-3 blue-grey"><div class="abs centerAbs orderBadgeIconLarge serviceChoosed"></div></div>
+
+
+			<div id="choosedServiceIcon" class="relative choosedServiceIcon easeMedium"></div>
+			<div class="choosedServiceDesc relative">
+
+				<div class="abs centerAbsVertical">
+					<div class="relative fullWidthRel paddingRight16 fs12">سرویس انتخابی شما:</div>
+					<div id="choosedServiceName" class="relative fullWidthRel blue-grey-text paddingRight16"></div>
+					<div class="changeServiceBtn waves-effect waves-dark easeMedium" onClick="activeStepManager(1)">انتخاب مجدد سرویس</div>
+				</div>
+
+			</div>
+		</div>
+		<!--step1 -> choose product-->
+
+		<div class="orderStepHolder relative fullWidthRel easeShort">
+
+			<!--badge icon balaye har ghesmat-->
+
+			<div class="orderBadge abs z-depth-3"><div class="abs centerAbs orderBadgeIcon">1</div></div>
+
+
+
+			<!--تیتر-->
+
+			<div class="orderStepTitleBox relative fullWidthRel">
+
+				<div class="relative fullWidthRel stepTitle">آدرس و شماره همراه</div>
+
+				<div class="relative fullWidthRel stepShortDesc">آدرس محل و شماره‌ی شخص دریافت کننده‌ی سرویس را وارد کنید.</div>
+
+			</div>
+
+
+
+			<!--لیست سرویس ها-->
+
+			<!--این دیو با کلاس پروداکت هولدر باید به تعداد مورد نیاز تکثیر شه-->
+			<input type="tel" id="phone" class="browser-default relative fullWidthRel centerTexts easeMedium marginBottom8 orderComment rightText myCustomBoxShadow" placeholder="تلفن">
+			<div class="productHolder relative easeMedium" onClick="chooseDistrictManager()">
+
+				<div class="relative fullWidthRel productBox waves-effect waves-yellow myCustomBoxShadow floatRigh">
+
+
+
+					<div class="abs centerAbsVertical easeMedium cityNameHolder">
+
+						<div class="fullWidthRel relative productName">تهران</div>
+
+						<div id="choosedDistrict" class="fullWidthRel relative productDesc white-text">انتخاب منطقه...</div>
+
+					</div>
+
+				</div>
+
+
+
+			</div>
+
+
+
+			<div class="carioSpinnerHolder relative myCustomBoxShadow theresIcon backLight commentHolder">
+
+
+				<textarea id="address" noBorder rows="2" maxlength="280" type="text" placeholder="آدرس دقیق را وارد کنید" class="browser-default relative fullWidthRel centerTexts easeMedium marginBottom8 orderComment rightText"></textarea>
+
+
+
+			</div>
+
+
+
+
+
+		</div>
+
+		<!--step1 -> choose product-->
+
+		<div class="orderStepHolder relative fullWidthRel easeShort">
+
+			<!--badge icon balaye har ghesmat-->
+
+			<div class="orderBadge abs z-depth-3"><div class="abs centerAbs orderBadgeIcon">2</div></div>
+
+
+
+			<!--تیتر-->
+
+			<div class="orderStepTitleBox relative fullWidthRel">
+
+				<div class="relative fullWidthRel stepTitle">نوع سرویس</div>
+
+				<div class="relative fullWidthRel stepShortDesc">انواع سرویس‌های قابل ارائه (با توجه به نوع خودرو). </div>
+
+			</div>
+
+
+
+			<!--لیست سرویس ها-->
+
+			<!--این دیو با کلاس پروداکت هولدر باید به تعداد مورد نیاز تکثیر شه-->
+
+
+
+                <!--
+
+                # the class serviceitem id service_1 and some data attached to the element
+
+                # don't forget to handle these while generating the services list mate
+
+                # NOTE: THE VALUE MUST BE NUMERIC ONLY, OTHERWISE ZERO WILL BE PASSED INSTEAD
+
+                # NOTE 2: add the id to the prefix "service_"; it's important to follow this structure
+
+                -->
+
+                <div id="servicesSection">   </div>
+
+
+
+
+
+
+
+
+
+
+
+		</div>
+
+		<!--step2 -> choose time and date-->
+
+		<div class="orderStepHolder relative fullWidthRel easeShort">
+
+			<!--badge icon balaye har ghesmat-->
+
+			<div class="orderBadge abs z-depth-3"><div class="abs centerAbs orderBadgeIcon">3</div></div>
+
+			<!--تیتر-->
+
+			<div class="orderStepTitleBox relative fullWidthRel">
+
+				<div class="relative fullWidthRel stepTitle">تاریخ و ساعت دریافت سرویس</div>
+
+				<div class="relative fullWidthRel stepShortDesc">تاریخ و ساعت مورد نظر برای دریافت سرویس را انتخاب کنید.</div>
+
+			</div>
+
+			<div class="carioSpinnerHolder relative myCustomBoxShadow theresIcon backLight" onClick="openSpinner(1)">
+
+				<!--spinnerIcon-->
+
+				<div  id="timeSelectedItemShowHere" class="selectedItemText abs centerAbsVertical">تاریخ دریافت سرویس</div>
+
+				<div id="dateSpinner" class="spinnerList abs easeShort">
+
+            <div id="dspinnerItem1" class="spinnerItem relative fullWidthRel waves-effect waves-yellow easeMedium selectedItem" onClick="onItemClick('dateSpinner', 1)">انتخاب روز...</div>
+
+            <div id="dspinnerItem2" class="spinnerItem relative fullWidthRel waves-effect waves-yellow easeMedium" onClick="onItemClick('dateSpinner', 2)">امروز</div>
+
+            <div id="dspinnerItem3" class="spinnerItem relative fullWidthRel waves-effect waves-yellow easeMedium" onClick="onItemClick('dateSpinner', 3)"> فردا</div>
+
+            <div id="dspinnerItem4" class="spinnerItem relative fullWidthRel waves-effect waves-yellow easeMedium" onClick="onItemClick('dateSpinner', 4)"> پس فردا</div>
+<!--
+            <div id="spinnerItem5" class="spinnerItem relative fullWidthRel waves-effect waves-yellow easeMedium" onClick="onItemClick('dateSpinner', 5)">بین ساعت 11 تا 12</div>
+
+            <div id="spinnerItem6" class="spinnerItem relative fullWidthRel waves-effect waves-yellow easeMedium" onClick="onItemClick('dateSpinner', 6)">بین ساعت 12 تا 13</div>
+
+            <div id="spinnerItem7" class="spinnerItem relative fullWidthRel waves-effect waves-yellow easeMedium" onClick="onItemClick('dateSpinner', 7)">بین ساعت 14 تا 15</div>
+
+            <div id="spinnerItem8" class="spinnerItem relative fullWidthRel waves-effect waves-yellow easeMedium" onClick="onItemClick('dateSpinner', 8)">بین ساعت 16 تا 17</div>
+
+            <div id="spinnerItem9" class="spinnerItem relative fullWidthRel waves-effect waves-yellow easeMedium" onClick="onItemClick('dateSpinner', 9)">بین ساعت 17 تا 18</div>-->
+
+
+
+
+				</div>
+
+			</div>
+
+
+
+			<div class="carioSpinnerHolder relative myCustomBoxShadow theresIcon backLight">
+
+				<!--spinnerIcon-->
+
+
+				<div id="selectedItemShowHere" class="selectedItemText abs centerAbsVertical " onClick="openSpinner(2);  return true;">ساعت دریافت سرویس</div>
+
+				<div id="timeSpinner" class="spinnerList abs easeShort">
+
+                    <div id="spinnerItem1" class="spinnerItem relative fullWidthRel waves-effect waves-yellow easeMedium selectedItem" onClick="onItemClick('timeSpinner', 1)">انتخاب ساعت...</div>
+
+                    <div id="spinnerItem2" class="spinnerItem relative fullWidthRel waves-effect waves-yellow easeMedium" onClick="onItemClick('timeSpinner', 2)">بین ساعت 8 تا 9</div>
+
+                    <div id="spinnerItem3" class="spinnerItem relative fullWidthRel waves-effect waves-yellow easeMedium" onClick="onItemClick('timeSpinner', 3)">بین ساعت 9 تا 10</div>
+
+                    <div id="spinnerItem4" class="spinnerItem relative fullWidthRel waves-effect waves-yellow easeMedium" onClick="onItemClick('timeSpinner', 4)">بین ساعت 10 تا 11</div>
+
+                    <div id="spinnerItem5" class="spinnerItem relative fullWidthRel waves-effect waves-yellow easeMedium" onClick="onItemClick('timeSpinner', 5)">بین ساعت 11 تا 12</div>
+
+                    <div id="spinnerItem6" class="spinnerItem relative fullWidthRel waves-effect waves-yellow easeMedium" onClick="onItemClick('timeSpinner', 6)">بین ساعت 12 تا 13</div>
+
+                    <div id="spinnerItem7" class="spinnerItem relative fullWidthRel waves-effect waves-yellow easeMedium" onClick="onItemClick('timeSpinner', 7)">بین ساعت 14 تا 15</div>
+
+                    <div id="spinnerItem8" class="spinnerItem relative fullWidthRel waves-effect waves-yellow easeMedium" onClick="onItemClick('timeSpinner', 8)">بین ساعت 15 تا 16</div>
+
+                    <div id="spinnerItem9" class="spinnerItem relative fullWidthRel waves-effect waves-yellow easeMedium" onClick="onItemClick('timeSpinner', 9)">بین ساعت 16 تا 17</div>
+
+                    <div id="spinnerItem10" class="spinnerItem relative fullWidthRel waves-effect waves-yellow easeMedium" onClick="onItemClick('timeSpinner', 10)">بین ساعت 17 تا 18</div>
+
+
+				</div>
+
+			</div>
+
+
+
+			<div class="carioSpinnerHolder relative myCustomBoxShadow theresIcon backLight commentHolder">
+
+				<!--spinnerIcon-->
+
+				<textarea id="extra_info" noBorder rows="4" maxlength="280" type="text" placeholder="توضیحات اضافی" class="browser-default relative fullWidthRel centerTexts easeMedium marginBottom8 orderComment rightText"></textarea>
+
+			</div>
+
+
+
+
+
+		</div>
+
+		<!--step3 -> priceDiscount-->
+
+		<div class="orderStepHolder relative fullWidthRel easeShort">
+
+			<!--badge icon balaye har ghesmat-->
+
+			<div class="orderBadge abs z-depth-3"><div class="abs centerAbs orderBadgeIcon">4</div></div>
+
+			<!--تیتر-->
+
+			<div class="orderStepTitleBox relative fullWidthRel">
+
+				<div class="relative fullWidthRel stepTitle">هزینه‌ی سرویس و نحوه‌ی پرداخت</div>
+
+				<div class="relative fullWidthRel stepShortDesc">تاریخ و ساعت مورد نظر برای دریافت سرویس را انتخاب کنید.</div>
+
+			</div>
+
+
+
+			<div class="carioInputTextHolder relative myCustomBoxShadow theresIcon backLight">
+
+				<!--spinnerIcon-->
+
+
+				<div class="relative priceHolder">
+
+					<div id="total" class="centerAbsVertical relative priceText centerTexts green-text"></div>
+
+					<div id="toman" class="abs priceUnit centerAbsVertical">تومان</div>
+
+				</div>
+
+				<div id="discountHolder" class="abs discountCodeHolder centerAbsVertical myCustomBoxShadow easeMedium off">
+
+					<div class="discountBtn relative myCustomBoxShadow red waves-effect waves-dark" onClick="discountBoxManager()">
+
+						<div class="abs centerAbs fabIcon discountBtnIcon"></div>
+
+					</div>
+
+					<div class="discountInputs relative">
+
+						<input type="text" placeholder="کد تخفیف را وارد کنید"  class="relative browser-default discountInput"/>
+
+					</div>
+
+				</div>
+
+			</div>
+
+
+
+			<div class="carioInputTextHolder relative myCustomBoxShadow theresIcon backLight payBtn">
+
+
+
+				<div id="payBtnCart" class="payMethodeBtn relative waves-effect waves-yellow" onClick="payMethodeChanger(2)">
+
+					<div id="payCartLabel" class="abs centerAbs payMethodeLabel easeLong">پرداخت در محل</div>
+
+				</div>
+
+
+
+				<div id="payBtnCredit" class="payMethodeBtn relative waves-effect waves-yellow noBorder" onClick="payMethodeChanger(1)">
+
+					<div id="payCreditLabel" class="abs centerAbs payMethodeLabel easeLong">پرداخت آنلاین</div>
+
+				</div>
+
+
+
+			</div>
+
+            <form id="submit_form" action="send.php" method="post">
+
+                <input id="order_id" type="hidden" name="order_id" value="">
+
+                <input id="total_amount" type="hidden" name="total_amount" value="">
+
+                <input type="button" name="submit" id="registerBtn" class="registerBtn relative waves-effect waves-yellow easeMedium"
+                       onClick="registerOrder()" value="ثبت سفارش">
+
+            </form>
+
+
+
+		</div>
+
+		<div class="relative addressTable fullWidthRel addressListRadius footer">
+
+			<div class="addressTableRow relative fullWidthRel easeLong footerHolder">
+
+				<div class="footerFont abs centerAbs centerTexts">
+
+					<div class="relative footerCarioLogo containImage"></div>
+
+					<div class="inlineBlock relative footerText">قدرت گرفته از کاریو<br>
+
+						<div class="inlineBlock relative deadText">تابستان 1397</div></div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="districtHolder" class="fixed zIndex1000 districtHolder easeMedium off">
+
+			<div class="tehranDistrict fix myCustomBoxShadow zIndex1000">
+
+				<div class="relative fullWidthRel centerTexts textPadding816 green white-text chooseDistrictTitle">ساکن کدام‌یک از مناطق 22گانه تهران هستید؟</div>
+
+				<div class="abs districtList">
+
+					<div class="relative floatRight districtBtn centerTexts waves-effect waves-green borderLeftDark" onClick="chooseDistrict(1)">منطقه 1</div>
+
+					<div class="relative floatRight districtBtn centerTexts waves-effect waves-green borderLeftDark" onClick="chooseDistrict(2)">منطقه 2</div>
+
+					<div class="relative floatRight districtBtn centerTexts waves-effect waves-green" onClick="chooseDistrict(3)">منطقه 3</div>
+
+					<div class="relative floatRight districtBtn centerTexts waves-effect waves-green borderLeftDark" onClick="chooseDistrict(4)">منطقه 4</div>
+
+					<div class="relative floatRight districtBtn centerTexts waves-effect waves-green borderLeftDark" onClick="chooseDistrict(5)">منطقه 5</div>
+
+					<div class="relative floatRight districtBtn centerTexts waves-effect waves-green" onClick="chooseDistrict(6)">منطقه 6</div>
+
+					<div class="relative floatRight districtBtn centerTexts waves-effect waves-green borderLeftDark" onClick="chooseDistrict(7)">منطقه 7</div>
+
+					<div class="relative floatRight districtBtn centerTexts waves-effect waves-green borderLeftDark" onClick="chooseDistrict(8)">منطقه 8</div>
+
+					<div class="relative floatRight districtBtn centerTexts waves-effect waves-green" onClick="chooseDistrict(9)">منطقه 9</div>
+
+					<div class="relative floatRight districtBtn centerTexts waves-effect waves-green borderLeftDark" onClick="chooseDistrict(10)">منطقه 10</div>
+
+					<div class="relative floatRight districtBtn centerTexts waves-effect waves-green borderLeftDark" onClick="chooseDistrict(11)">منطقه 11</div>
+
+					<div class="relative floatRight districtBtn centerTexts waves-effect waves-green" onClick="chooseDistrict(12)">منطقه 12</div>
+
+					<div class="relative floatRight districtBtn centerTexts waves-effect waves-green borderLeftDark" onClick="chooseDistrict(13)">منطقه 13</div>
+
+					<div class="relative floatRight districtBtn centerTexts waves-effect waves-green borderLeftDark" onClick="chooseDistrict(14)">منطقه 14</div>
+
+					<div class="relative floatRight districtBtn centerTexts waves-effect waves-green" onClick="chooseDistrict(15)">منطقه 15</div>
+
+					<div class="relative floatRight districtBtn centerTexts waves-effect waves-green borderLeftDark" onClick="chooseDistrict(16)">منطقه 16</div>
+
+					<div class="relative floatRight districtBtn centerTexts waves-effect waves-green borderLeftDark" onClick="chooseDistrict(17)">منطقه 17</div>
+
+					<div class="relative floatRight districtBtn centerTexts waves-effect waves-green" onClick="chooseDistrict(18)">منطقه 18</div>
+
+					<div class="relative floatRight districtBtn centerTexts waves-effect waves-green borderLeftDark" onClick="chooseDistrict(19)">منطقه 19</div>
+
+					<div class="relative floatRight districtBtn centerTexts waves-effect waves-green borderLeftDark" onClick="chooseDistrict(20)">منطقه 20</div>
+
+					<div class="relative floatRight districtBtn centerTexts waves-effect waves-green" onClick="chooseDistrict(21)">منطقه 21</div>
+
+					<div class="relative floatRight districtBtn centerTexts waves-effect waves-green fullWidthRel" onClick="chooseDistrict(22)">منطقه 22</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
+
+
+<!--JavaScript at end of body for optimized loading-->
+
+<script src="js/jquery.min.js"></script>
+
+<script type="text/javascript" src="js/materialize.min.js"></script>
+
+<script type="text/javascript" src="js/scripts.js" charset="utf-8"></script>
+
+
+
+</body>
+
+</html>

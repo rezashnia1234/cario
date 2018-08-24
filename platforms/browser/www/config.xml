@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="ir.cario.gap" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Cario</name>
+    <description>
+        Cario, online car services
+    </description>
+    <author email="ali.ashkaran@gmail.com" href="http://cario.ir">
+        Cario Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <icon platform="ios" src="res/icon/ios/icon.png" />
+    <icon platform="android" src="res/icon/android/icon.png" />
+</widget>
